@@ -28,7 +28,7 @@ jobs:
     - name: Unit Test
       run: dotnet test Calculator/Calculator.sln --no-build --verbosity normal --collect:"XPlat Code Coverage"
     - name: Copy Coverage to root
-      run: cp coverage/**/coverage.cobertura.xml coverage.cobertura.xml
+      run: cp Calculator/Calculator.Tests/TestResults/**/coverage.cobertura.xml coverage.cobertura.xml
     - name: Code Coverage Summary
       uses: irongut/CodeCoverageSummary@v1.2.0
       with:
