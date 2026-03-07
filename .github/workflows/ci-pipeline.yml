@@ -10,6 +10,10 @@ on:
         required: true
         default: 'warning'
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -46,7 +50,7 @@ jobs:
         path: StrykerOutput
     - name: Add Coverage PR Comment
       uses: marocchino/sticky-pull-request-comment@v2.2.0
-      if: github.event_name == 'pull_request'
+      if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
       with:
         recreate: true
         path: code-coverage-results.md
