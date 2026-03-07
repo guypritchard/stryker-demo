@@ -36,7 +36,7 @@ jobs:
     - name: Copy Coverage to root
       run: cp Calculator/Calculator.Tests/TestResults/**/coverage.cobertura.xml coverage.cobertura.xml
     - name: Code Coverage Summary
-      uses: irongut/CodeCoverageSummary@5088d5eb315a46ff785c607078606c0b9107e0b6 # v1.2.0
+      uses: irongut/CodeCoverageSummary@51cc3a756ddcd398d447c044c02cb6aa83fdae95 # v1.3.0
       with:
         filename: coverage.cobertura.xml
         fail_below_min: true
