@@ -23,6 +23,12 @@ namespace Calculator.Tests
         }
 
         [Test]
+        public void Test2_1()
+        {
+            Assert.AreEqual(21, Operations.Embiggen(20));
+        }
+
+        [Test]
         public void Test3()
         {
             Assert.AreEqual(22, Operations.Embiggen(21));
